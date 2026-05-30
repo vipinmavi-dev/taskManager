@@ -1,0 +1,117 @@
+body{
+    margin: 0px;
+    height: 100%;
+}
+.activeButton {
+    color: white;
+    background-color: oklch(54.6% .245 262.881);
+}
+.pageBody{
+    background-color: #faf4fd;
+}
+.commonPageHeader{
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 13px 0px;
+    box-shadow: 0px 0px 5px;
+}
+nav{
+    display: flex;
+}
+.navLink{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 5px 12px;
+    border-radius: 10px;
+}
+.font18px{
+    font-size: 18px;
+}
+.font10px{
+    font-size: 10px;
+}
+.headerLogo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.dashboardBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4vh;
+    min-height: 100vh;
+
+}
+.Header{
+    text-align: center;
+}
+.Header h2{
+    margin-bottom: 0px;
+    font-weight: 400;
+}
+.Header h5{
+    margin-top: 12px;
+    margin-bottom: 40px;
+    font-weight: 400;
+    color: rgb(117, 116, 116);
+}
+.content {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.tile:hover{
+    box-shadow: 0px 0px 10px rgba(94, 92, 92, 0.309);
+}
+.tile{
+    text-align: center;
+    width: 20vw;
+    height: 20vw;
+    padding: 30px 30px;
+    box-shadow: 0px 0px 10px rgba(94, 92, 92, 0.129);
+    border-radius: 10px;
+}
+.icon-wrapper{
+    background-color: oklch(0.64 0.2 263.6);
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    align-content: center;
+    border-radius: 50%;
+}
+.icon-wrapper1{
+    background-color: oklch(0.68 0.2 147.73);
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    align-content: center;
+    border-radius: 50%;
+}
+.icon-wrapper2{
+    background-color: oklch(0.59 0.27 301.96);
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    align-content: center;
+    border-radius: 50%;
+}
+.tile svg {
+    background: none !important;
+}
+.tile h3{
+    font-weight: 500;
+    margin-bottom: 13px;
+}
+.tile h6{
+    font-weight: 500;
+    color: rgb(117, 116, 116);
+    margin-top: 0px;
+}
+.tile span{
+    color: rgb(117, 116, 116);
+    font-size: 12px;
+}
