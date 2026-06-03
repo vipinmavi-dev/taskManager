@@ -9,22 +9,22 @@ import { Get, Post } from "./service/request.tsx";
 
 async function beforeEveryRoute({request}) {
 
-  const isLogin = localStorage.getItem("login") === "true";
-  const url = new URL(request.url);
-  const currentPath = url.pathname;
+  // const isLogin = localStorage.getItem("login") === "true";
+  // const url = new URL(request.url);
+  // const currentPath = url.pathname;
   
-  if (currentPath !== "/login" && isLogin !== true) {
-    const code = new URLSearchParams(window.location.search).get("code");
-    await Post("/auth/exchange", {"code": code});
-    const mySelf = await Get("/me");
-    if(mySelf.status == 200){
-      localStorage.setItem("login", "true");
-      localStorage.setItem("name", mySelf.data.name);
-    }
-    else throw redirect("/login");
-  }else if(currentPath == "/login" && isLogin == true){
-    throw redirect("/list");
-  }
+  // if (currentPath !== "/login" && isLogin !== true) {
+  //   const code = new URLSearchParams(window.location.search).get("code");
+  //   await Post("/auth/exchange", {"code": code});
+  //   const mySelf = await Get("/me");
+  //   if(mySelf.status == 200){
+  //     localStorage.setItem("login", "true");
+  //     localStorage.setItem("name", mySelf.data.name);
+  //   }
+  //   else throw redirect("/login");
+  // }else if(currentPath == "/login" && isLogin == true){
+  //   throw redirect("/list");
+  // }
 }
 function RootLayout() {
   return <Outlet />; // Renders child routes
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     loader: beforeEveryRoute,
     children: [
-      { index: true, element: <Navigate to="/login" replace /> },
+      { index: true, element: <Navigate to="/dashboard" replace /> },
       { path: "login", element: <LoginController /> },
       { path: "sign-up", element: <SignUp /> },
       { path: "dashboard", element: <h1>Dashboard</h1> },
