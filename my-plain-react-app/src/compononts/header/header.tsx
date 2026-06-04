@@ -1,6 +1,7 @@
-import React, {useEffect} from "react";
+import React from "react";
 import { useNavigate, useLocation } from "react-router";
 import { Home, CheckSquare, BookOpen, Calendar } from "lucide-react";
+import "./header.css";
 
 function Header() {
     const navigate = useNavigate();

@@ -4,9 +4,11 @@
   "description": "This a Full-stack web application  that allows users to create, add , edit and delete the task and track their daily tasks efficiently.",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"npm run client\" \"npm run devServer\"",
+    "start:dev": "concurrently \"npm run client\" \"npm run server:dev\"",
+    "start:prod": "concurrently \"npm run client\" \"npm run server:prod\"",
     "client": "npm --prefix my-plain-react-app start",
-    "devServer": "npm --prefix apis run dev"
+    "server:dev": "npm --prefix apis run dev",
+    "server:prod": "npm --prefix apis run prod"
   },
   "repository": {
     "type": "git",

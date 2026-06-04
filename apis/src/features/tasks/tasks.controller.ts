@@ -77,11 +77,33 @@ const mySelf = async (req: Request,res : Response, next: NextFunction)=>{
         next(error);
     }
 };
+
+// it's just a test function for study. It will be removed letter.
+const sendSSRpage = async (req: Request,res : Response, next: NextFunction)=>{
+    try{
+        const page = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <title>SSR Example</title>
+      </head>
+      <body>
+        <h1>This page is from Server Side.</h1>
+      </body>
+      </html>
+    `;
+
+    res.status(200).send(page);
+    }catch(error){
+        next(error);
+    }
+};
 export {
     listTask, 
     addTask, 
     updatetask, 
     deleteTask,
     FetchTask,
-    mySelf
+    mySelf,
+    sendSSRpage
 };
